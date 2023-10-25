@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Información y Sugerencias</title>
+		<style type="text/css">
+			.xul{
+				list-style-type:none;
+				margin:20px;
+				padding:20px;
+				overflow:hidden;
+				background-color: #FF2171;
+			}
+			.xli{float:left;} 
+
+			.xli a{
+				color:white;
+				text-align:center;
+				padding:50px;
+				font-size: 25px;
+				text-decoration:none;
+				font-family: TW Cen MT;
+			}
+			.xli a:hover{background-color:#FF2171;}
+			#pie {
+			  background-color:#FF2171;
+			}
+            #pie h1{
+			  text-align: center;
+			  padding-top: 15px;
+			  color: #000000;
+			  font-weight: normal;
+			  font-size: 35px;
+			  font font-family: Gafata;
+			}
+            #pie a {
+			  color: #6c584f;
+			  padding-top: 30px;
+			  display: inline-block;
+			  padding: 0 15px;
+			}
+			
+			.copyright{
+				margin-top: 15px;
+				text-align: center;
+			    font-size: 20px;
+		      	color: #FFFFFF;
+				font-family: century Gothic;
+			}
+      .servicios-container {
+            display: flex;
+            justify-content: center; 
+        }
+			.Servicios {
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+      }
+
+      .servicio {
+        display: flex;
+        position: relative;
+        width: 380px;
+        height: 450px;
+        margin: 10px;
+        margin-top: 30px;
+      }
+      .servicio .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      .servicio .front {
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0 5px 10px #181818;
+      }
+      .face-front {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+      .servicio .front h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: white;
+        background-color: rgba(0, 0, 0, .4);
+        text-align: center;
+        font-family: Century Gothic;
+      }
+      .servicio .back {
+        transform: perspective(600px) rotateY(180deg);
+        background: linear-gradient(to right, #FFF2F2 , #F0DBDB);
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        font-family: Century Gothic;
+
+      }
+      .servicio .back .link {
+        border-top: solid 1px #f3f3f3;
+        height: 50px;
+        line-height: 50px;
+      }
+
+      .servicio .link a {
+        color: #f3f3f3;
+      }
+
+      .servicio .back h3 {
+        font-size: 30px;
+        background: linear-gradient(to right, #FFF2F2 , #F0DBDB);
+      }
+
+      .servicio .back p {
+        letter-spacing: 1px;
+      }
+
+      .servicio:hover .front {
+        transform: perspective(600px) rotateY(180deg);
+      }
+
+      .servicio:hover .back {
+        transform: perspective(600px) rotateY(360deg);
+      }
+      @media (max-width: 768px) {
+        .servicio {
+          width: 100%;
+          max-width: 300px;
+        }
+        .back p{
+          font-size: 25px;
+          padding-left: 15px;
+        }
+
+      }
+
+      .back-front img{
+        width: 300px;
+        height: 400px;
+      }
+
+
+      @keyframes cambio {
+        0% {
+          margin-left: 0;
+        }
+
+        0% {
+          margin-left: 0;
+        }
+
+        20% {
+          margin-left: 0;
+        }
+
+        25% {
+          margin-left: -100%;
+        }
+
+        35% {
+          margin-left: -100%;
+        }
+
+        40% {
+          margin-left: -200%
+        }
+
+        55% {
+          margin-left: -200%;
+        }
+
+        60% {
+          margin-left: -300%
+        }
+
+        70% {
+          margin-left: -300%;
+        }
+
+        75% {
+          margin-left: -400%;
+        }
+
+        100% {
+          margin-left: -400%;
+        }
+      }
+      form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #FF2171;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="reset"] {
+            background-color: #FF2171;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+		</style>
+	</head>
+	<body>
+		<body background="he2.jpg">
+	<div align="center">
+			<img src="logo.png" width="300" height="300"></li>
+	        </div>
+			<ul class="xul">
+				<li class="xli"><a href="Asig. No. 10, 2do Parcial_JanethIrineo.html"> Inicio </li></a>
+				<li class="xli"><a href="Pedido_JI.html">Pedido </li></a>
+				<li class="xli"><a href="Informacion.html"> Informacion y Sugerencias </li></a>
+        <li class="xli"><a href="Sesion.html">Cerrar sesión </li></a>
+			</ul>
+
+			<div align="center">
+        <h2 id="encontrarnos">¿Dónde nos encontramos?</h2><br>
+    </div>
+    <div class="Servicios" align="center">
+            <div class="servicio">
+                <div class="face front">
+                    <img src="heladooo.jpg">
+                    <h3>Ofertas</h3>
+                </div>
+                <div class="face back">
+                    <br>
+                    <h3>¡Encuentra ofertas!</h3>
+                    <p>Todos los dias son especiales en estos días, pero se acerca la navidaad! Encuentra helados en descuento desde el 20 de noviembre de este año.</p>
+                    <div class="link"></div>
+                </div>
+            </div>
+            <div class="servicio">
+                <div class="face front">
+                    <img src="helado.jpg">
+                    <h3>Redes sociales</h3>
+                </div>
+                <div class="face back">
+                    <br>
+                    <h3>¡Nuestras Redes Sociales!</h3>
+                    <p>Puedes encontrarnos en Instagram bajo el nombre de usuario "heladeria_mochi" y en Facebook como "Heladeria Mochi".</p>
+                    <div class="link"></div>
+                </div>
+            </div>
+            <div class="servicio">
+                <div class="face front">
+                    <img src="heladoo.jpg">
+                    <h3>Lugar</h3>
+                </div>
+                <div class="face back">
+                    <br>
+                    <h3>Físicamente estamos...</h3>
+                    <p>Entre las calles Yucatán y Quintana Roo en Cd. Obregón, Sonora.</p>
+                    <div class="link"></div>
+                </div>
+            </div>
+            </div>
+            <div align="center">
+            <h1>Envíanos tus Sugerencias o Comentarios</h1></div>
+        <form action="https://formspree.io/f/mjvqlerd" method="post">
+        <label for="sugerencias">Sugerencias/Comentarios:</label><br>
+        <textarea id="sugerencias" name="sugerencias" rows="4" cols="50" required></textarea><br>
+        <input type="email" name="_replyto" placeholder="Tu correo electrónico" required>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+    </form>          
+	<div id="pie">
+        <h1 class="hola">Siguenos en nuestras redes sociales</h1>
+        <footer>
+        	<section id="redes" align="center">
+        		<a href="https://www.facebook.com"><img src="feis.png" width="50" height="50"></a>
+        		<a href="https://www.instagram.com"><img src="ig.png" width="50" height="50"></a>
+        		<a href="https://www.tiktok.com"><img src="tok.png" width="50" height="50"></a>
+        		<a href="https://www.twitter.com"><img src="ti.png" width="50" height="50"></a>
+        		<p class="copyright">
+        		@Heladeria Mochi 
+        	    </p>
+        </footer>	
+        </div>		
+	</body>
+</html>

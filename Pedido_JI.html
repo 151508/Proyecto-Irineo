@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pedido</title>
+		<style type="text/css">
+			p{
+				font-family: cursive;
+			}
+			.xul{
+				list-style-type:none;
+				margin:20px;
+				padding:20px;
+				overflow:hidden;
+				background-color: #FF2171;
+			}
+			.xli{float:left;} 
+
+			.xli a{
+				color:white;
+				text-align:center;
+				padding:50px;
+				font-size: 25px;
+				text-decoration:none;
+				font-family: TW Cen MT;
+			}
+			.xli a:hover{background-color:#FF2171;} 
+			.contact_form{
+            	width: 450px; 
+            	height: auto;
+            	margin: auto;
+            	border-radius: 30px; 
+            	box box-shadow: 0px 0px 60px; 
+            	padding-top: 20px;
+            	padding-bottom: 20px;  
+            	background-color: #fbfbfb; 
+            	padding-left: 15px;
+            	margin-top: 20px;
+            	font-family: Garamond; 
+            }
+            input{
+            	background-color: #fbfbfb; 
+            	width: 400px;
+            	height: 20px;
+				border-radius: 5px;  
+				border-style: solid; 
+				border-width: 2px; 
+				border-color: #000000; 
+				margin-top: 10px;   
+				padding-left: 10px;
+				margin-bottom: 30px;
+				padding-bottom: 10px;
+				font-family: century Gothic;
+			}
+			.botones input{
+				width: 120px;
+				height: 22px;
+				border-radius: 5px;
+				border-style: solid;
+				margin-top: 10px;
+				padding-left: 10px;
+				margin-bottom: 20px;
+				font-family: Centrury Gothic;
+				font-size: 100%;
+				background-color: #de5777;
+			}
+			#pie {
+			  background-color:#FF2171;
+			}
+            #pie h1{
+			  text-align: center;
+			  padding-top: 15px;
+			  color: #000000;
+			  font-weight: normal;
+			  font-size: 35px;
+			  font font-family: Gafata;
+			}
+            #pie a {
+			  color: #6c584f;
+			  padding-top: 30px;
+			  display: inline-block;
+			  padding: 0 15px;
+			}
+			
+			.copyright{
+				margin-top: 15px;
+				text-align: center;
+			    font-size: 20px;
+		      	color: #FFFFFF;
+				font-family: century Gothic;
+			}}
+		</style>
+	</head>
+	<body background="he2.jpg">
+	<div align="center">
+			<img src="logo.png" width="300" height="300"></li>
+	        </div>
+			<ul class="xul">
+				<li class="xli"><a href="Asig. No. 10, 2do Parcial_JanethIrineo.html"> Inicio </li></a>
+				<li class="xli"><a href="Pedido_JI.html">Pedido </li></a>
+				<li class="xli"><a href="Informacion.html"> Informacion y Sugerencias </li></a>
+				<li class="xli"><a href="Sesion.html">Cerrar sesión </li></a>
+			</ul>
+	<div class="contact_form">
+        <form onsubmit="return mostrarMensaje();">
+        	<p>
+        		<h1>Formulario de Pedido</h1>
+        	    <label for="nombre">Nombre: </label><br>
+                <input type="text" class="h" id="nombre" required><br>
+	            <label for="numero">Numero: </label><br>
+	            <input type="number" class="i" id="apellido" required><br>
+	            <label for="fecha">Direccion: </label><br>
+	            <input type="text" class="e" id="direccion" required><br>
+	            <div class="botones">
+	            <label for="email">Producto: </label>
+	            <select id="producto" required>
+	            	<option>Helado de chocolate</option>
+	            	<option>Helado de fresa</option>
+	            	<option>Helado de vainilla</option>
+	            	<option>Helado de MilkyWay</option>
+	            	<option>Helado enchiloso</option>
+	            </select>
+	            <br><br>
+	            <script>
+			        function mostrarMensaje() {
+			            var nombre = document.getElementById("nombre").value;
+			            var producto = document.getElementById("producto").value;
+			            alert("¡Gracias, " + nombre + "! Tu pedido de " + producto + " ha sido enviado.");
+			            return false;
+			        }
+			    </script>
+			    <input type="submit" value="Enviar">
+	            <input type="reset" value="Borrar">
+	        </div>
+            </p>
+        </form>
+    </div>
+    <div id="pie">
+        <h1 class="hola">Siguenos en nuestras redes sociales</h1>
+        <footer>
+        	<section id="redes" align="center">
+        		<a href="https://www.facebook.com"><img src="feis.png" width="50" height="50"></a>
+        		<a href="https://www.instagram.com"><img src="ig.png" width="50" height="50"></a>
+        		<a href="https://www.tiktok.com"><img src="tok.png" width="50" height="50"></a>
+        		<a href="https://www.twitter.com"><img src="ti.png" width="50" height="50"></a>
+        		<p class="copyright">
+        		@Heladeria Mochi 
+        	    </p>
+        </footer>	
+        </div>		
+	</body>
+</html>
